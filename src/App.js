@@ -52,7 +52,7 @@ function ClassHtml(props) {
   var startTimeFormatted = new Intl.DateTimeFormat('en-US', {hour: '2-digit', minute: '2-digit'}).format(startTime);
   var endTimeFormatted = new Intl.DateTimeFormat('en-US', {hour: '2-digit', minute: '2-digit'}).format(endTime);
   return (
-    <dl style={{float: 'left', padding: '10px'}}>
+    <dl style={{display: 'inline-block', padding: '10px'}}>
     <h2>{schoolClass.name}</h2>
     <h3>{schoolClass.days}, {startTimeFormatted} - {endTimeFormatted}</h3>
     </dl>
@@ -63,13 +63,13 @@ function ClassList(props) {
   // var date = new Date('January 09, 2023 00:00:00');
   return (
     props.classes.map((schoolClass) => 
-      <ClassHtml class={schoolClass}/>
+      <ClassHtml key={schoolClass.name} class={schoolClass}/>
   ));
 }
 
 function ScheduleList() {
   return (
-    data.schedules.map((schedule) => <li>
+    data.schedules.map((schedule) => <li key={schedule.name}>
       <h1>{schedule.name}</h1>
       <ClassList classes={schedule.classes}/>
     </li>)
@@ -77,7 +77,6 @@ function ScheduleList() {
 }
 
 function App() {
-  // const root = ReactDOM.createRoot(document.getElementById('root'));
   // const value = "hi";
   // root.render(<=.Fragment><h1>Hello {value}, world! {new Date().toLocaleTimeString()}</h1></React.Fragment>);
   return (
@@ -85,8 +84,7 @@ function App() {
       <Clock />
       <Test name="OK Bud"/>
       <ScheduleList />
-    </div>
-  );
+    </div>);
 }
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
