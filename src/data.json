@@ -1,0 +1,25 @@
+{
+    "schedules": [
+        {
+            "name" : "John Assh",
+            "classes" : [
+                {
+                    "name" : "CS 2130",
+                    "days" : "MWF",
+                    "startHour" : "14",
+                    "startMinute" : "0",
+                    "endHour" : "14",
+                    "endMinute" : "50"
+                },
+                {
+                    "name" : "CS 3140",
+                    "days" : "TH",
+                    "startHour" : "12",
+                    "startMinute" : "30",
+                    "endHour" : "1",
+                    "endMinute" : "45"
+                }
+            ]
+        }
+    ]
+}
