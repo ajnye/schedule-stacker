@@ -16,7 +16,8 @@ code {
 table tr td {
   border-right: 1px solid blue;
   color: black;
-  width: 10%;
+  width: 5%;
+  padding: 20px;
   text-align: center;
 }
 
@@ -26,4 +27,44 @@ table tr td:first-of-type {
 
 table tr td:last-of-type {
   border: none;
+}
+
+.row {
+  min-width: 1000px;
+  white-space: nowrap;
+  overflow:visible;
+}
+
+.column {
+  float: left;
+  width: 12.5%;
+  text-align: center;
+  white-space: nowrap;
+  /* min-width: 100px; */
+}
+
+svg {
+  display:inline;
+  position:relative; right:0px; top:0px;
+}
+
+.side-column {
+  float: left;
+  text-align: center;
+  white-space: nowrap;
+  overflow:visible;
+}
+
+.side-column p {
+  padding:30px;
+  position: sticky;
+  overflow:visible;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  overflow:visible;
 }
