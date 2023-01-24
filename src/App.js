@@ -87,6 +87,19 @@ function App() {
     </div>);
 }
 
+function showTooltip(e) {
+  let tooltip = document.getElementById("tooltip");
+  tooltip.innerHTML = e.class;
+  tooltip.style.display = "block";
+  tooltip.style.left = e.pageX + 10 + 'px';
+  tooltip.style.top = e.pageY + 10 + 'px';
+}
+
+function hideTooltip(e) {
+  var tooltip = document.getElementById("tooltip");
+  tooltip.style.display = "none";
+}
+
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(<Clock />);
 

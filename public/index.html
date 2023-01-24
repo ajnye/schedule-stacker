@@ -48,6 +48,8 @@
       <tr><td>2 PM<hr></td></tr>
     </table>
 
+    <div id="tooltip" display="none" style="position: absolute; display: none;"></div>
+
     <div class="row">
       <div class="side-column">
         <p>8</p>
@@ -72,7 +74,7 @@
         <div class="day-row">
           <svg width="75" height="500">
             <g>
-              <rect x="0" y="25" width="200" height="200" fill="red" />
+              <rect class="tooltip" x="0" y="25" width="200" height="200" fill="red" onMouseOver={showTooltip} onMouseOut={hideTooltip}></rect>
               <text x="0" y="50" font-family="Verdana" font-size="25" fill="blue">CS 2130</text>
               <text x="0" y="75" font-family="Verdana" font-size="20" fill="blue">Jamal Jafar III</text>
               <text x="0" y="100" font-family="Verdana" font-size="15" fill="blue">08:00 AM - 10:00 AM</text>
